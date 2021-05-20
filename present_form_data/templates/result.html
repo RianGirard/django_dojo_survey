@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Result Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+
+    </head>
+    <body>
+
+        <div id="body">
+            <h1>Submitted Info:</h1>
+            <div id="inner">
+                <table>
+                    <tr>
+                        <td class="td_label">Name:</td>
+                        <td class="td_data">{{name}}</td>
+                    </tr>
+                    <tr>    
+                        <td class="td_label">Dojo Location:</td>
+                        <td class="td_data">{{dojo}}</td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Favorite Language:</td>
+                        <td class="td_data">{{language}}</td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Favorite Language (radio):</td>
+                        <td class="td_data">{{radiolanguage}}</td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Favorite Language (checkbox):</td>
+                        <td class="td_data">{{data}}</td>
+                    </tr>
+                    <tr>   
+                        <td class="td_label">Comment:</td>
+                        <td class="td_data">{{comment}}</td>
+                    </tr>
+                </table>
+                <p>
+            </div>
+            <div>
+                <button onclick="goBack()" id="goback">Go Back</button>
+            </div>
+
+        </div>
+    </body>
+</html>

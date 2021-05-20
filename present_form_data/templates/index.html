@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Submit Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        <div id="main">
+            <form method="POST" action="result">
+                {% csrf_token %}
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <p>
+                <label for="dojo_location">Dojo Location:</label>
+                <select name="dojo_location" id="dojo_location">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Online">Online</option>
+                </select>
+                <p>
+                <label for="fav_language">Favorite Language:</label>
+                <select name="fav_language" id="fav_language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Perl">Perl</option>
+                    <option value="Python">Python</option>
+                    <option value="HTML">HTML</option>
+                </select>
+                <p id="indent">
+                or if you prefer radios...
+                </p>
+                <p>    
+                <div id="special">
+                    <input type="radio" class="special" name="radiofav_language" value="JavaScript" checked="checked">
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="radio" class="special" name="radiofav_language" value="Perl">
+                    <label for="Perl">Perl</label>
+                    <input type="radio" class="special" name="radiofav_language" value="Python">
+                    <label for="Python">Python</label>
+                    <input type="radio" class="special" name="radiofav_language" value="HTML">
+                    <label for="HTML">HTML</label>
+                </div>
+                <p id="indent">
+                    or if you prefer checkboxes...
+                    </p>
+                    <p>    
+                    <div id="special">
+                        <input type="checkbox" class="special" name="checklangs[]" value="JavaScript">
+                        <label for="JavaScript">JavaScript</label>
+                        <input type="checkbox" class="special" name="checklangs[]" value="Perl">
+                        <label for="Perl">Perl</label>
+                        <input type="checkbox" class="special" name="checklangs[]" value="Python">
+                        <label for="Python">Python</label>
+                        <input type="checkbox" class="special" name="checklangs[]" value="HTML">
+                        <label for="HTML">HTML</label>
+                    </div>
+                <p>                
+                <p>Comment (optional):</p>
+                <textarea name="comment" id="text_area"></textarea>
+                <p>
+                <input type="submit" value="Enter" id="submit">
+            </form>
+        </div>
+
+    </body>
+</html>

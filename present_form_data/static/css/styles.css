@@ -1,0 +1,53 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-size: 16pt;
+}
+
+#main, #body {
+    width: 600px;
+    margin: auto;   
+    margin-top: 50px;
+    border: 2px black solid;
+    padding: 50px;
+}
+form {
+    width: 100%;
+}
+
+#name, #dojo_location, #fav_language, #submit, #goback {    
+    border-radius:10px;
+    float:right;
+
+}
+
+#text_area {
+    width: 100%;
+    border-radius: 10px;
+    height: 100px;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+#inner {
+    padding: 0px 50px;
+    width: 100%;
+}
+
+.td_label {
+    width: 50%;
+    padding: 10px 0px;
+}
+
+#special {
+    text-align: right
+}
+
+.special {
+    display: inline-block;
+}
+
+#indent {
+    padding-left: 25px;
+}
