@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -8,14 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="{% static 'js/script.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">        <!--syntax required for Django -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>     <!-- CDN for jQuery -->
+        <script src="{% static 'js/script.js' %}"></script>                 <!--syntax required for Django -->
     </head>
     <body>
         <div id="main">
-            <form method="POST" action="result">
-                {% csrf_token %}
+            <form method="POST" action="result">    <!--Note action "result" directs the path to the urls.py and routes to the correct method in views.py -->
+                {% csrf_token %}                    <!--syntax required for Django "POST" requests -->
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
                 <p>
@@ -34,34 +33,34 @@
                     <option value="Python">Python</option>
                     <option value="HTML">HTML</option>
                 </select>
-                <p id="indent">
+                <p class="indent">
                 or if you prefer radios...
                 </p>
                 <p>    
-                <div id="special">
-                    <input type="radio" class="special" name="radiofav_language" value="JavaScript" checked="checked">
+                <div class="special">   <!--id's here are standard formatting, not used in CSS; have used Div container .special to align text to the right -->
+                    <input type="radio" id="JavaScript" name="radiofav_language" value="JavaScript" checked="checked">
                     <label for="JavaScript">JavaScript</label>
-                    <input type="radio" class="special" name="radiofav_language" value="Perl">
+                    <input type="radio" id="Perl" name="radiofav_language" value="Perl">
                     <label for="Perl">Perl</label>
-                    <input type="radio" class="special" name="radiofav_language" value="Python">
+                    <input type="radio" id="Python" name="radiofav_language" value="Python">
                     <label for="Python">Python</label>
-                    <input type="radio" class="special" name="radiofav_language" value="HTML">
+                    <input type="radio" id="HTML" name="radiofav_language" value="HTML">
                     <label for="HTML">HTML</label>
                 </div>
-                <p id="indent">
+                <p class="indent">
                     or if you prefer checkboxes...
-                    </p>
-                    <p>    
-                    <div id="special">
-                        <input type="checkbox" class="special" name="checklangs[]" value="JavaScript">
-                        <label for="JavaScript">JavaScript</label>
-                        <input type="checkbox" class="special" name="checklangs[]" value="Perl">
-                        <label for="Perl">Perl</label>
-                        <input type="checkbox" class="special" name="checklangs[]" value="Python">
-                        <label for="Python">Python</label>
-                        <input type="checkbox" class="special" name="checklangs[]" value="HTML">
-                        <label for="HTML">HTML</label>
-                    </div>
+                </p>
+                <p>    
+                <div class="special">
+                    <input type="checkbox" id="JavaScript2" name="checklangs[]" value="JavaScript">
+                    <label for="JavaScript2">JavaScript</label>
+                    <input type="checkbox" id="Perl2" name="checklangs[]" value="Perl">
+                    <label for="Perl2">Perl</label>
+                    <input type="checkbox" id="Python2" name="checklangs[]" value="Python">
+                    <label for="Python2">Python</label>
+                    <input type="checkbox" id="HTML2" name="checklangs[]" value="HTML">
+                    <label for="HTML2">HTML</label>
+                </div>
                 <p>                
                 <p>Comment (optional):</p>
                 <textarea name="comment" id="text_area"></textarea>
