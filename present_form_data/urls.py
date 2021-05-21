@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('', views.index),
-    path('result', views.process),      # this is "result" path called by Form action setting in index.html on POST request; invokes method .process from views.py
+    path('process', views.process),         # this is "process" path called by Form action setting in index.html on POST request
+    path('result', views.result),         # this is "result" path to which the .process method will redirect
 ]

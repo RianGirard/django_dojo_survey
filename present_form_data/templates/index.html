@@ -13,7 +13,7 @@
     </head>
     <body>
         <div id="main">
-            <form method="POST" action="result">    <!--Note action "result" directs the path to the urls.py and routes to the correct method in views.py -->
+            <form method="POST" action="process">    <!--Note action "process" directs the path to the urls.py and routes to the correct method in views.py -->
                 {% csrf_token %}                    <!--syntax required for Django "POST" requests -->
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
